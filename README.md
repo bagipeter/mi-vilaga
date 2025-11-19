@@ -10,11 +10,11 @@ Ez a verzió már tartalmaz egy működő **Gemini-alapú kérdezz-felelek chatb
 
 ## ✨ Funkciók
 
-✅ **Kérdezz-felelek oldal** – élő AI tanár válaszol magyarul, gyerekbarát stílusban  
-✅ **Gemini 2.0 Flash integráció** – gyors, biztonságos válaszok Google AI Studio API-n keresztül  
-✅ **Tanári prompt** – türelmes, példákkal magyarázó válaszok  
-✅ **Letisztult UI** – Tailwind CSS alapú, játékos színvilág  
-✅ **Készen áll a bővítésre** – avatar, hangos válasz, animáció, témakörök
+- ✅ **Kérdezz-felelek oldal** – élő AI tanár válaszol magyarul, gyerekbarát stílusban  
+- ✅ **Gemini 2.0 Flash integráció** – gyors, biztonságos válaszok Google AI Studio API-n keresztül  
+- ✅ **Tanári prompt** – türelmes, példákkal magyarázó válaszok  
+- ✅ **Letisztult UI** – Tailwind CSS alapú, játékos színvilág  
+- ✅ **Készen áll a bővítésre** – avatar, hangos válasz, animáció, témakörök
 
 ---
 
@@ -38,6 +38,7 @@ GEMINI_API_KEY=AIza... (a saját Google AI Studio kulcsod)
 npm run dev
 ```
 ## 📁 Fájlstruktúra
+```
 app/
   api/
     ask/
@@ -48,6 +49,7 @@ public/
   styles/
     globals.css      ← Saját stílusok (gyerekbarát dizájn)
 .env.local           ← API kulcs (ne oszd meg nyilvánosan)
+```
 
 ## 🛠️ Technológiai stack
 - Next.js 13+ – modern React keretrendszer
@@ -85,11 +87,11 @@ This beta version already includes a working **Gemini-powered Q&A chatbot**, whi
 
 ## ✨ Features
 
-✅ **Q&A page** – live AI teacher answers in Hungarian, child-friendly style  
-✅ **Gemini 2.0 Flash integration** – fast, safe answers via Google AI Studio API  
-✅ **Teacher prompt** – patient, example-based explanations  
-✅ **Clean UI** – Tailwind CSS-based playful design  
-✅ **Ready for expansion** – avatar, voice answers, animations, topic modules  
+- ✅ **Q&A page** – live AI teacher answers in Hungarian, child-friendly style  
+- ✅ **Gemini 2.0 Flash integration** – fast, safe answers via Google AI Studio API  
+- ✅ **Teacher prompt** – patient, example-based explanations  
+- ✅ **Clean UI** – Tailwind CSS-based playful design  
+- ✅ **Ready for expansion** – avatar, voice answers, animations, topic modules  
 
 ---
 
@@ -114,6 +116,7 @@ npm install
 ```npm run dev```
 
 ## 📁 File Structure
+```
 app/
   api/
     ask/
@@ -124,6 +127,7 @@ public/
   styles/
     globals.css      ← Custom styles (child-friendly design)
 .env.local           ← API key (do not share publicly)
+```
 
 ## 🛠️ Tech Stack
 Next.js 13+ – modern React framework

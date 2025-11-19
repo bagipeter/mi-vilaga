@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌍 MI Világa – Ready Beta Version
 
-## Getting Started
+## 📘 Mi ez?
 
-First, run the development server:
+**MI Világa** egy magyar nyelvű, gyerekbarát oktató webalkalmazás, amely mesterséges intelligenciát használ arra, hogy 8–12 éves gyerekeknek érthetően, játékosan és biztonságosan magyarázza el az informatikai és digitális világ alapjait.
 
+Ez a verzió már tartalmaz egy működő **Gemini-alapú kérdezz-felelek chatbotot**, amely tanári stílusban válaszol a gyerekek kérdéseire.
+
+---
+
+## ✨ Funkciók
+
+✅ **Kérdezz-felelek oldal** – élő AI tanár válaszol magyarul, gyerekbarát stílusban  
+✅ **Gemini 2.0 Flash integráció** – gyors, biztonságos válaszok Google AI Studio API-n keresztül  
+✅ **Tanári prompt** – türelmes, példákkal magyarázó válaszok  
+✅ **Letisztult UI** – Tailwind CSS alapú, játékos színvilág  
+✅ **Készen áll a bővítésre** – avatar, hangos válasz, animáció, témakörök
+
+---
+
+## 🧑‍💻 Telepítés
+
+**Klónozd a repót**
+```bash
+git clone https://github.com/felhasznalo/mi-vilaga.git
+cd mi-vilaga
+```
+**Telepítsd a függőségeket:**
+```bash
+npm install
+```
+**.env.local file létrehozása a projekt gyökerében**
+```.env.local
+GEMINI_API_KEY=AIza... (a saját Google AI Studio kulcsod)
+```
+**fejlesztői szerver indítása**
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+## 📁 Fájlstruktúra
+app/
+  api/
+    ask/
+      route.js       ← Gemini API hívás tanári prompttal
+  kerdezz/
+    page.tsx         ← Kérdezz-felelek UI és logika
+public/
+  styles/
+    globals.css      ← Saját stílusok (gyerekbarát dizájn)
+.env.local           ← API kulcs (ne oszd meg nyilvánosan)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Technológiai stack
+- Next.js 13+ – modern React keretrendszer
+- Tailwind CSS – gyors és játékos stílusozás
+- Google Gemini API – mesterséges intelligencia válaszokhoz
+- Node.js – szerver oldali futtatás
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎓 Oktatási cél
+Ez a projekt célja, hogy:
+- Segítse a gyerekeket megérteni a digitális világot
+- Bátorítsa a kérdezést és a kíváncsiságot
+- Biztonságos, magyar nyelvű AI tanárt biztosítson
+- Támogassa a szülőket és pedagógusokat a digitális nevelésben
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📜 Licenc
+Ez a projekt nyílt forráskódú, oktatási célra szabadon felhasználható.
+Kérlek, ne használd kereskedelmi célra a gyerekek biztonsága érdekében.
 
-## Learn More
+## 🤝 Közreműködés
+Ha szeretnél hozzájárulni, hibát jelenteni vagy ötletet adni, nyugodtan nyiss egy issue-t vagy pull requestet.
+A projekt célja, hogy közösségi tudásbázissá váljon a magyar gyerekek számára.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

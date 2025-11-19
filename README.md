@@ -29,8 +29,8 @@ cd mi-vilaga
 ```bash
 npm install
 ```
-**.env.local file létrehozása a projekt gyökerében**
-```.env.local
+**.env file létrehozása a projekt gyökerében**
+```.env
 GEMINI_API_KEY=AIza... (a saját Google AI Studio kulcsod)
 ```
 **fejlesztői szerver indítása**

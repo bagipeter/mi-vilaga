@@ -1,4 +1,4 @@
-# 🌍 MI Világa – Ready Beta Version
+# 🌍 MI Világa – Beta Version
 
 ## 📘 Mi ez?
 

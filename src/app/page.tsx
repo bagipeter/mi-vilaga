@@ -40,6 +40,9 @@ export default function Home() {
           <Link href="/biztonsag" className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600">
             🔐 Digitális biztonság
           </Link>
+          <Link href="/biztonsag/szuloknek" className="px-6 py-3 bg-orange-600 text-white rounded hover:bg-orange-800">
+          🔐 Digitális biztonság szülöknek
+          </Link>
           <Link href="/ai" className="px-6 py-3 bg-pink-500 text-white rounded hover:bg-pink-600">
             🤖 Mi az MI?
           </Link>

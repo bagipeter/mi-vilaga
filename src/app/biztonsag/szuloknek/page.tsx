@@ -77,10 +77,6 @@ export default function SzuloknekPage() {
 
   return (
     <div className="p-6 max-w-4xl mx-auto">
-      <div className="mb-6">
-        <VisszaGomb />
-      </div>
-
       <h2 className="text-2xl font-bold mb-6 text-red-600 text-center">👨‍👩‍👧‍👦 Digitális biztonság szülőknek</h2>
       <div className="flex items-center gap-4 mb-8 justify-center">
         <Image src="/pictures/avatar.png" alt="Avatar" width={70} height={70} className="rounded-full shadow-md" />
@@ -106,6 +102,10 @@ export default function SzuloknekPage() {
           </div>
         ))}
       </div>
+      <div className="mb-6">
+        <VisszaGomb />
+      </div>
+
     </div>
   );
 }

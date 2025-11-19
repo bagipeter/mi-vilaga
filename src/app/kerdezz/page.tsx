@@ -1,13 +1,15 @@
 'use client';
 import VisszaGomb from '@/components/VisszaGomb';
 import { useState } from 'react';
+import '../styles/custom.css';
 
 export default function KerdesValasz() {
   const [question, setQuestion] = useState('');
   const [answer, setAnswer] = useState('');
   const [loading, setLoading] = useState(false);
 
-const askGemini = async () => {
+ const askGemini = async () => {
+  if (!question.trim()) return;
   try {
     setLoading(true);
     setAnswer('');
@@ -23,9 +25,24 @@ const askGemini = async () => {
     }
 
     const data = await res.json();
-    console.log('Gemini válasz:', data);
+    const fullReply = typeof data.reply === 'string' && data.reply.length > 0
+      ? data.reply
+      : 'Hoppá, nem sikerült választ kapni.';
 
-    setAnswer(data.reply || 'Hoppá, nem sikerült választ kapni.');
+    // ✨ Stabil animáció: belső változóval, nem állapottal építve
+    let i = 0;
+    let tempAnswer = '';
+
+    const typeNext = () => {
+      tempAnswer += fullReply[i];
+      setAnswer(tempAnswer);
+      i++;
+      if (i < fullReply.length) {
+        setTimeout(typeNext, 40);
+      }
+    };
+
+    typeNext();
   } catch (error) {
     console.error('Gemini API hiba:', error);
     setAnswer('Hiba történt a kérdés feldolgozása közben.');
@@ -33,14 +50,21 @@ const askGemini = async () => {
     setLoading(false);
   }
 };
+
   return (
     <div className="p-6 max-w-2xl mx-auto">
       <h2 className="text-xl font-bold mb-4">❓ Kérdezz–felelek</h2>
       <textarea
         value={question}
         onChange={(e) => setQuestion(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault(); // ne törjön sort
+            askGemini();
+          }
+        }}
         className="w-full p-2 border rounded mb-4"
-        placeholder="Írd be a kérdésed..."
+        placeholder="Írd be a kérdésed... (Enter = küldés, Shift+Enter = sortörés)"
       />
       <button
         onClick={askGemini}
@@ -49,17 +73,16 @@ const askGemini = async () => {
       >
         {loading ? 'Válasz készül...' : 'Kérdezz'}
       </button>
-      {answer && (
-  <div className="mt-4 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded shadow-sm text-gray-800">
-    <p>{answer}</p>
-  </div>
-)}
 
-   <div className="mb-6">
-      <VisszaGomb />
+      {answer && (
+        <div className="mt-4 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded shadow-sm text-gray-800">
+          <p>{answer}</p>
+        </div>
+      )}
+
+      <div className="mb-6">
+        <VisszaGomb />
+      </div>
     </div>
-</div>
-    
-    
   );
 }

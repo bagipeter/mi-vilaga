@@ -50,20 +50,24 @@ export default function AiPage() {
           </div>
         ))}
       </div>
-      <div className="mt-10 flex items-end justify-end">
-  <Link href="/ai/tobb" className="flex items-end gap-3 hover:scale-105 transition-all">
-    <div className="bg-white p-3 rounded-xl shadow-md max-w-xs text-sm text-slate-700">
-      Szeretnél többet megtudni rólam? 🤖
-    </div>
-    <Image
-      src="/pictures/avatar.png"
-      alt="Mini avatar"
-      width={50}
-      height={50}
-      className="rounded-full shadow-md"
-    />
-  </Link>
-</div>
+
+      {/* A link csak akkor jelenik meg, ha az utolsó buborék is látszik */}
+      {showBackButton && (
+        <div className="mt-10 flex items-end justify-end">
+          <Link href="/ai/tobb" className="flex items-end gap-3 hover:scale-105 transition-all">
+            <div className="bg-white p-3 rounded-xl shadow-md max-w-xs text-sm text-slate-700">
+              Szeretnél többet megtudni rólam? 🤖
+            </div>
+            <Image
+              src="/pictures/avatar.png"
+              alt="Mini avatar"
+              width={50}
+              height={50}
+              className="rounded-full shadow-md"
+            />
+          </Link>
+        </div>
+      )}
 
       {showBackButton && <VisszaGomb />}
     </div>

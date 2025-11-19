@@ -40,18 +40,6 @@ const items = [
 export default function BiztonsagPage() {
   return (
     <div className="p-6 max-w-6xl mx-auto">
-      {/* Vissza gomb felül */}
-      <div className="mb-6">
-        <VisszaGomb />
-      </div>
-
-          <Link href="/biztonsag/szuloknek" className="flex items-end mx-3 gap-3">
-            <div className="bg-white p-3  rounded-xl shadow-md max-w-xs text-lg text-red-700">
-            A biztonságról szülöknek, kattints és tájékozódj!
-            </div>
-            </Link>
-
-
       {/* Cím + avatar */}
       <h2 className="text-2xl font-bold mb-6 text-orange-600 text-center">🔐 Digitális biztonság gyerekeknek</h2>
       <div className="flex items-center gap-4 mb-8 justify-center">
@@ -71,6 +59,11 @@ export default function BiztonsagPage() {
           </div>
         ))}
       </div>
+      {/* Vissza gomb felül */}
+      <div className="mb-6">
+        <VisszaGomb />
+      </div>
+
     </div>
   );
 }

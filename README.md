@@ -73,5 +73,78 @@ A projekt célja, hogy közösségi tudásbázissá váljon a magyar gyerekek sz
 
 
 
+# 🌍 MI Világa – Beta Version
+
+## 📘 What is this?
+
+**MI Világa** is a Hungarian-language, child-friendly educational web application that uses artificial intelligence to explain the basics of the digital world in a playful, safe, and understandable way for children aged 8–12.
+
+This beta version already includes a working **Gemini-powered Q&A chatbot**, which answers children’s questions in a teacher-like style.
+
+---
+
+## ✨ Features
+
+✅ **Q&A page** – live AI teacher answers in Hungarian, child-friendly style  
+✅ **Gemini 2.0 Flash integration** – fast, safe answers via Google AI Studio API  
+✅ **Teacher prompt** – patient, example-based explanations  
+✅ **Clean UI** – Tailwind CSS-based playful design  
+✅ **Ready for expansion** – avatar, voice answers, animations, topic modules  
+
+---
+
+## 🧑‍💻 Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/username/mi-vilaga.git
+cd mi-vilaga
+```
+
+**Install dependencies:**
+```bash
+npm install
+```
+
+**Create an .env file in the project root**
+```GEMINI_API_KEY=AIza... (your own Google AI Studio key)```
+
+**Start the development server**
+```npm run dev```
+
+## 📁 File Structure
+app/
+  api/
+    ask/
+      route.js       ← Gemini API call with teacher prompt
+  kerdezz/
+    page.tsx         ← Q&A UI and logic
+public/
+  styles/
+    globals.css      ← Custom styles (child-friendly design)
+.env.local           ← API key (do not share publicly)
+
+## 🛠️ Tech Stack
+Next.js 13+ – modern React framework
+Tailwind CSS – fast and playful styling
+Google Gemini API – AI-powered answers
+Node.js – server-side runtime
+
+## 🎓 Educational Purpose
+This project aims to:
+Help children understand the digital world
+Encourage curiosity and asking questions
+Provide a safe, Hungarian-language AI teacher
+Support parents and educators in digital education
+
+## 📜 License
+This project is open-source and free to use for educational purposes.
+Please do not use it for commercial purposes to ensure children’s safety.
+
+## 🤝 Contributing
+If you’d like to contribute, report a bug, or share ideas, feel free to open an issue or pull request.
+The goal is to make this project a community-driven knowledge base for Hungarian children.
+
 
 
